@@ -1,0 +1,61 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todos_again {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+  font-size: 26px;
+  margin-top: 10px;
+  animation-name: todo;
+  animation-duration: 0.5s;
+}
+
+.todo_title {
+  background-color: #9ac4cf9c;
+  padding-left: 10px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.todo_delete {
+  background-color: #f43571c4;
+  border-radius: 50%;
+  width: 50px;
+  text-align: center;
+  margin-left: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.todo_add {
+  border-radius: 25px;
+}
+
+.todo_delete:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+@keyframes todo {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

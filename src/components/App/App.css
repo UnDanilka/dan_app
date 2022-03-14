@@ -1,0 +1,15 @@
+.app_light {
+  background-color: rgb(255, 255, 255);
+}
+.app_dark {
+  background-color: rgb(54, 54, 54);
+  color: #fff7f7;
+}
+
+.app_default {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100vh;
+  font-family: monospace, Courier;
+}
