@@ -17,9 +17,9 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/dan_app" element={<About />} />
-          <Route path="/dan_app/todos" element={<Todos />} />
-          <Route path="/dan_app/contacts" element={<Contacts />} />
+          <Route path="/" element={<About />} />
+          <Route path="/todos" element={<Todos />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
       </Router>
     </div>
