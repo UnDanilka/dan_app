@@ -7,13 +7,13 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <div className="links">
-        <Link className="link" to="/dan_app">
+        <Link className="link" to="/">
           About me
         </Link>
-        <Link className="link" to="/dan_app/todos">
+        <Link className="link" to="/todos">
           Todos
         </Link>
-        <Link className="link" to="/dan_app/contacts">
+        <Link className="link" to="/contacts">
           Contacts
         </Link>
       </div>
