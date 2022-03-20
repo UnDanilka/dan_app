@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dan_app/static/css/main.1a747b0f.css",
+    "main.js": "/dan_app/static/js/main.90173421.js",
+    "static/media/photo_dark.jpg": "/dan_app/static/media/photo_dark.0ccf23c5bf77fab07f0e.jpg",
+    "static/media/photo.jpg": "/dan_app/static/media/photo.36c66cac2fb8ddbe709a.jpg",
+    "static/media/ig.svg": "/dan_app/static/media/ig.3345f316b6012a1f43f3af8ce8890d36.svg",
+    "static/media/gmail.svg": "/dan_app/static/media/gmail.88cffca8296fbdef30edc70be596aa43.svg",
+    "static/media/apple.svg": "/dan_app/static/media/apple.efca8b74bf2dd828ed41fd6d76aa69c8.svg",
+    "static/media/github.svg": "/dan_app/static/media/github.7772fc3f79ebaa87ac90c56a3a0d279c.svg",
+    "static/media/tg.svg": "/dan_app/static/media/tg.8df5d3e37d4803dbf306f8578a4e3fc5.svg",
+    "static/media/sun.svg": "/dan_app/static/media/sun.427a07691f73f4abf86a7e133da5bfff.svg",
+    "static/media/moon.svg": "/dan_app/static/media/moon.74d95cd637281f47ef00f191eb97e2de.svg",
+    "index.html": "/dan_app/index.html",
+    "main.1a747b0f.css.map": "/dan_app/static/css/main.1a747b0f.css.map",
+    "main.90173421.js.map": "/dan_app/static/js/main.90173421.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a747b0f.css",
+    "static/js/main.90173421.js"
+  ]
+}
