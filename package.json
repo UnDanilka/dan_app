@@ -27,9 +27,7 @@
     "start": "node server js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server -w db.json -p 3001",
-    "dev": "concurrently \"json-server -w db.json -p 3001\" \"react-scripts start\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
