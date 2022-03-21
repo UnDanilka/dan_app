@@ -2,7 +2,7 @@ import "./App.css";
 import Navigation from "../Navigation/Navigation";
 import { useSelector } from "react-redux";
 import Todos from "../Todos/Todos";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "../About/About";
 import Contacts from "../Contacts/Contacts";
 import { Istore } from "../../types";

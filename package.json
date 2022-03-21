@@ -1,5 +1,4 @@
 {
-  "homepage": "https://UnDanilka.github.io/dan_app",
   "name": "dan_app",
   "version": "0.1.0",
   "private": true,
@@ -29,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server -w db.json -p 3001",
-    "dev": "concurrently \"json-server -w server/db.json -p 3001\" \"react-scripts start\""
+    "dev": "concurrently \"json-server -w db.json -p 3001\" \"react-scripts start\""
   },
   "eslintConfig": {
     "extends": [
