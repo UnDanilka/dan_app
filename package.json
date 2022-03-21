@@ -14,7 +14,6 @@
     "@types/react-dom": "^17.0.13",
     "antd": "^4.19.1",
     "concurrently": "^7.0.0",
-    "gh-pages": "^3.2.3",
     "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -25,13 +24,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "start": "node server js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -w server/db.json -p 3001",
+    "server": "json-server -w db.json -p 3001",
     "dev": "concurrently \"json-server -w server/db.json -p 3001\" \"react-scripts start\""
   },
   "eslintConfig": {
