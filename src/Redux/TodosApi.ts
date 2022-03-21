@@ -4,7 +4,7 @@ export const todosApi = createApi({
   reducerPath: "todosApi",
   tagTypes: ["Todos"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://dan-app-redux.herokuapp.com/api/",
+    baseUrl: "https://dan-app-redux.herokuapp.com/api",
   }),
   endpoints: (build) => ({
     getTodos: build.query<void, void>({
