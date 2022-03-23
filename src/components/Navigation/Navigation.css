@@ -11,8 +11,8 @@
   max-height: 10vh;
   display: none;
   justify-content: space-between;
-
   align-items: center;
+  padding: 10px;
 }
 
 .navigation_menu {
