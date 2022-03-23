@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 10vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .navigation_small {
@@ -10,7 +10,7 @@
   min-height: 10vh;
   max-height: 10vh;
   display: none;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
 }
