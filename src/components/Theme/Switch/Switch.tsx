@@ -9,7 +9,6 @@ const Switch = (props: ISwitchProps) => {
 
   useEffect(() => {
     onChange(on);
-    console.log(on);
   }, [on, onChange]);
 
   return (

@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 10vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: sticky;
   align-items: center;
 }
@@ -10,6 +10,8 @@
   width: 100%;
   min-height: 10vh;
   display: none;
+  justify-content: space-between;
+
   position: sticky;
   align-items: center;
 }

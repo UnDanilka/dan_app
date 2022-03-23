@@ -22,6 +22,7 @@ const Navigation = () => {
   return (
     <>
       <div className="navigation">
+        <div style={{ width: "65px" }} />
         <div className="links">
           <Link className="link" to="/">
             About me

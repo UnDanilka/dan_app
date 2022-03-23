@@ -24,7 +24,7 @@ const Theme = () => {
   console.log("siiuuu", theme);
 
   return (
-    <div className="">
+    <div className="switch_wrapper">
       {theme === "light" ? (
         <Sun style={{ width: "20px", marginRight: "5px" }} />
       ) : (
