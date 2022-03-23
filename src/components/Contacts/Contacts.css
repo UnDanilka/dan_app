@@ -12,6 +12,20 @@
   margin-left: 40%;
   gap: 20px;
   font-size: 15px;
+  animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes first {
+  0% {
+    opacity: 1;
+    transform: translate(200%);
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 550px) {

@@ -16,6 +16,8 @@
   width: 200px;
   height: 270px;
   border-radius: 10px;
+  animation-name: photo;
+  animation-duration: 1s;
 }
 
 .about_personal {
@@ -34,6 +36,8 @@
   width: 45%;
   min-width: 150px;
   font-size: 20px;
+  animation-name: text;
+  animation-duration: 1s;
 }
 
 .about_container {
@@ -67,6 +71,23 @@
   height: 10px;
   border-radius: 50%;
   background-color: rgba(103, 103, 190, 0.678);
+}
+
+@keyframes photo {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes text {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 @media (max-width: 500px) {

@@ -51,6 +51,7 @@
 
 .todo_add {
   border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.63);
 }
 
 .todo_delete:hover {

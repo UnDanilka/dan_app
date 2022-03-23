@@ -26,7 +26,11 @@ const Contacts = () => {
     <div className="contacts">
       {contacts.map((contactItem: Icontact, i: number) => {
         return (
-          <div className="contact" key={i}>
+          <div
+            className="contact"
+            style={{ animationName: "first", animationDelay: `0.${i}s` }}
+            key={i}
+          >
             <div className="contact_icon">
               <contactItem.icon />
             </div>
