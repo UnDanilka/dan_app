@@ -21,3 +21,7 @@ export interface Istore {
   theme: IthemeState;
   todosApi: any;
 }
+
+export interface ISwitchProps {
+  onChange: (e: boolean) => void;
+}
