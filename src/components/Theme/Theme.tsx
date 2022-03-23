@@ -21,8 +21,6 @@ const Theme = () => {
     [dispatch]
   );
 
-  console.log("siiuuu", theme);
-
   return (
     <div className="switch_wrapper">
       {theme === "light" ? (

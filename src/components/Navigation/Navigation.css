@@ -3,7 +3,6 @@
   min-height: 10vh;
   display: flex;
   justify-content: space-between;
-  position: sticky;
   align-items: center;
 }
 .navigation_small {
