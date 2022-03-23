@@ -6,7 +6,7 @@ import {
 } from "../../Redux/TodosApi";
 import { Button, Input } from "antd";
 import "./Todos.css";
-import { CloseOutlined } from "@ant-design/icons";
+import { CloseOutlined, SettingTwoTone } from "@ant-design/icons";
 import { Itodo } from "../../types";
 
 const Todos = () => {
@@ -38,7 +38,7 @@ const Todos = () => {
         <Input
           value={newTodo}
           placeholder="enter todo here"
-          style={{ width: "500px", borderRadius: "25px", marginRight: "10px" }}
+          className="input"
           onChange={handleInputChange}
           onPressEnter={handleAddTodo}
         />
@@ -47,21 +47,27 @@ const Todos = () => {
         </Button>
       </div>
       <div className="todos_list">
-        {isLoading
-          ? "loading"
-          : data.map((item: Itodo) => {
-              return (
-                <div className="todo" key={item.id}>
-                  <div className="todo_title">{item.title}</div>
-                  <div
-                    className="todo_delete"
-                    onClick={() => handleDeleteProduct(item.id)}
-                  >
-                    <CloseOutlined style={{ color: "white" }} />
-                  </div>
+        {isLoading ? (
+          <SettingTwoTone
+            twoToneColor="#eb2f96"
+            spin
+            style={{ fontSize: "70px", marginTop: "20px" }}
+          />
+        ) : (
+          data.map((item: Itodo) => {
+            return (
+              <div className="todo" key={item.id}>
+                <div className="todo_title">{item.title}</div>
+                <div
+                  className="todo_delete"
+                  onClick={() => handleDeleteProduct(item.id)}
+                >
+                  <CloseOutlined style={{ color: "white" }} />
                 </div>
-              );
-            })}
+              </div>
+            );
+          })
+        )}
       </div>
     </div>
   );

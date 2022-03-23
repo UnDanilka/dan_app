@@ -78,4 +78,8 @@
   .about_container {
     flex-direction: column;
   }
+
+  .about_text {
+    width: 100%;
+  }
 }

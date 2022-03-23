@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.switch:hover {
+  cursor: pointer;
+}
+
 .switch-ball {
   background-color: rgb(255, 255, 255);
   width: 15px;
