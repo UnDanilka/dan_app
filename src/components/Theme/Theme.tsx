@@ -24,9 +24,13 @@ const Theme = () => {
   return (
     <div className="switch_wrapper">
       {theme === "light" ? (
-        <Sun style={{ width: "20px", marginRight: "5px" }} />
+        <div>
+          <Sun style={{ width: "20px", marginRight: "5px" }} />
+        </div>
       ) : (
-        <Moon style={{ width: "20px", marginRight: "5px" }} />
+        <div>
+          <Moon style={{ width: "20px", marginRight: "5px" }} />
+        </div>
       )}
       <Switch onChange={handleThemeChange} />
     </div>
