@@ -39,17 +39,17 @@ const About = () => {
       <div className="about_welcome">
         Hi my name is Danil and I'm frontend developer
       </div>
-      <div className="about_personal">
-        <div className="about_text">
-          23 years old energetic, hard-working programmer. I love to travel, do
-          sports, watch movies. Took part in the program work and travel.
-        </div>
+      <div className="about_personal ">
         <div>
           <img
             className="about_photo"
             src={theme === "light" ? photo : photo_dark}
             alt="my face"
           />
+        </div>
+        <div className="about_text">
+          23 years old energetic, hard-working programmer. I love to travel, do
+          sports, watch movies. Took part in the program work and travel.
         </div>
       </div>
       <div className="about_container">

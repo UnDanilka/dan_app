@@ -46,21 +46,23 @@ const Todos = () => {
           Send
         </Button>
       </div>
-      {isLoading
-        ? "loading"
-        : data.map((item: Itodo) => {
-            return (
-              <div className="todo" key={item.id}>
-                <div className="todo_title">{item.title}</div>
-                <div
-                  className="todo_delete"
-                  onClick={() => handleDeleteProduct(item.id)}
-                >
-                  <CloseOutlined style={{ color: "white" }} />
+      <div className="todos_list">
+        {isLoading
+          ? "loading"
+          : data.map((item: Itodo) => {
+              return (
+                <div className="todo" key={item.id}>
+                  <div className="todo_title">{item.title}</div>
+                  <div
+                    className="todo_delete"
+                    onClick={() => handleDeleteProduct(item.id)}
+                  >
+                    <CloseOutlined style={{ color: "white" }} />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+      </div>
     </div>
   );
 };

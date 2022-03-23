@@ -1,10 +1,30 @@
 .navigation {
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
   display: flex;
   justify-content: center;
   position: sticky;
   align-items: center;
+}
+.navigation_small {
+  width: 100%;
+  min-height: 10vh;
+  display: none;
+  position: sticky;
+  align-items: center;
+}
+
+.navigation_menu {
+  transition: all 0.3s ease-in-out;
+  padding: 5px;
+  border: 3px solid rgba(128, 128, 128, 0.562);
+  border-radius: 5px;
+}
+
+.navigation_menu:hover {
+  cursor: pointer;
+  border-color: rgb(75, 162, 184);
+  color: rgb(75, 162, 184);
 }
 
 .links {
@@ -24,4 +44,18 @@
 .link:hover {
   color: rgb(255, 255, 255);
   transform: scale(1.2);
+}
+
+.link_menu {
+  font-weight: 600;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .navigation {
+    display: none;
+  }
+  .navigation_small {
+    display: flex;
+  }
 }
