@@ -64,7 +64,7 @@
 }
 .ant-drawer-header {
   background-color: #130e0e00;
-  padding: 20px;
+  padding: 1px;
 }
 
 @media (max-width: 700px) {
