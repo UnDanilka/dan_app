@@ -62,6 +62,10 @@
   background-color: #00000011;
   backdrop-filter: blur(4px);
 }
+.ant-drawer-header {
+  background-color: #7d797911;
+  padding: 20px;
+}
 
 @media (max-width: 700px) {
   .navigation {

@@ -56,7 +56,6 @@ const Navigation = () => {
         </div>
         <Drawer
           width={200}
-          headerStyle={{ backgroundColor: "#00000011" }}
           closeIcon={<CloseOutlined style={{ color: "white" }} />}
           placement="left"
           onClose={handleCloseDrawer}
