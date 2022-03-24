@@ -48,7 +48,19 @@
 
 .link_menu {
   font-weight: 600;
-  color: white;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+/* CHANGED ANTD STYLES */
+
+.ant-drawer-content {
+  background-color: #00000011;
+  /* backdrop-filter: blur(4px); */
+}
+.ant-drawer-content-wrapper {
+  background-color: #00000011;
+  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 700px) {

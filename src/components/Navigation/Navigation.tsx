@@ -2,11 +2,25 @@ import Theme from "../Theme/Theme";
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
-import { Tooltip } from "antd";
+import { Drawer } from "antd";
+import { useState } from "react";
+import { CloseOutlined } from "@ant-design/icons";
 
 const Navigation = () => {
+  const [drawer, setDrawer] = useState(false);
+
+  const handleCloseDrawer = () => {
+    setDrawer(false);
+  };
+  const handleOpenDrawer = () => {
+    setDrawer(true);
+  };
+
   const linksSmall = (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div
+      onClick={handleCloseDrawer}
+      style={{ display: "flex", flexDirection: "column" }}
+    >
       <Link className="link_menu" to="/">
         About me
       </Link>
@@ -37,16 +51,19 @@ const Navigation = () => {
         <Theme />
       </div>
       <div className="navigation_small">
-        <Tooltip
-          overlayInnerStyle={{ borderRadius: "15px" }}
-          color="#1d3b42c3"
-          placement="bottomLeft"
-          title={linksSmall}
+        <div className="navigation_menu" onClick={handleOpenDrawer}>
+          <MenuOutlined />
+        </div>
+        <Drawer
+          width={200}
+          headerStyle={{ backgroundColor: "#00000011" }}
+          closeIcon={<CloseOutlined style={{ color: "white" }} />}
+          placement="left"
+          onClose={handleCloseDrawer}
+          visible={drawer}
         >
-          <div className="navigation_menu">
-            <MenuOutlined />
-          </div>
-        </Tooltip>
+          {linksSmall}
+        </Drawer>
 
         <Theme />
       </div>

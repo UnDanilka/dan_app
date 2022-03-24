@@ -25,8 +25,14 @@ const Todos = () => {
       setNewTodo("");
     }
   };
-  const handleDeleteProduct = async (id: number) => {
-    await deleteTodo(id).unwrap();
+  const handleDeleteProduct = async (id: number, e: React.MouseEvent) => {
+    const btn = e.target as Element;
+
+    const todo = btn.closest(".todo");
+    todo?.classList.add("todo_removed");
+    todo?.addEventListener("animationend", async () => {
+      await deleteTodo(id).unwrap();
+    });
   };
 
   return (
@@ -60,7 +66,7 @@ const Todos = () => {
                 <div className="todo_title">{item.title}</div>
                 <div
                   className="todo_delete"
-                  onClick={() => handleDeleteProduct(item.id)}
+                  onClick={(e) => handleDeleteProduct(item.id, e)}
                 >
                   <CloseOutlined style={{ color: "white" }} />
                 </div>

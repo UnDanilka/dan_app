@@ -29,6 +29,7 @@
   margin-top: 10px;
   animation-name: todo;
   animation-duration: 0.5s;
+  height: 41px;
 }
 
 .todo_title {
@@ -39,6 +40,12 @@
   overflow: hidden;
 }
 
+.todo_removed {
+  animation-name: todo_removed;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
 .todo_delete {
   background-color: #f43571c4;
   border-radius: 50%;
@@ -47,6 +54,7 @@
   text-align: center;
   margin-left: 5px;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .todo_add {
@@ -57,6 +65,25 @@
 .todo_delete:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+
+@keyframes todo_removed {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-100vw);
+  }
+
+  50% {
+    height: 41px;
+    transform: translate(-100vw);
+  }
+  100% {
+    height: 0px;
+    margin-top: 0px;
+    transform: translate(-100vw);
+  }
 }
 
 @keyframes todo {
