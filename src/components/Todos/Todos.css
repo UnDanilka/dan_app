@@ -9,7 +9,29 @@
 .todos_again {
   font-size: 25px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.todos_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  overflow: scroll;
+  width: 100%;
+}
+
+.todos_reset {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #40a9ff;
+  padding: 10px;
+  border-radius: 25px;
+}
+.todos_reset_btn {
+  margin-bottom: 10px;
+  border-radius: 25px;
 }
 
 .input {

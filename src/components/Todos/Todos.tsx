@@ -11,6 +11,7 @@ import { Itodo } from "../../types";
 
 const Todos = () => {
   const [newTodo, setNewTodo] = useState("");
+  const [disabled, setDisabled] = useState(false);
   const { data = [], isLoading } = useGetTodosQuery();
   const [addTodo] = useAddTodosMutation();
   const [deleteTodo] = useDeleteTodosMutation();
@@ -35,11 +36,24 @@ const Todos = () => {
     });
   };
 
+  const handleResetTodos = async () => {
+    setDisabled(true);
+    const deleteArr = data.map(async (item: any) => await deleteTodo(item.id));
+    Promise.all(deleteArr).then(() =>
+      addTodo({ title: "first" })
+        .unwrap()
+        .then(() => addTodo({ title: "second" }).unwrap())
+        .then(() => addTodo({ title: "third" }).unwrap())
+        .then(() => setDisabled(false))
+    );
+  };
+
   return (
     <div className="todos">
       <div className="todos_again">
         Could you make a TODO's list...? OHHH ####... Here we go again...
       </div>
+
       <div>
         <Input
           value={newTodo}
@@ -74,6 +88,20 @@ const Todos = () => {
             );
           })
         )}
+      </div>
+      <div className="todos_reset">
+        <div className="todos_reset_text">
+          The data is taken from the server, please reset to the default
+          settings after using, thank you!
+        </div>
+        <Button
+          size="small"
+          className="todos_reset_btn"
+          onClick={() => handleResetTodos()}
+          disabled={disabled}
+        >
+          Reset
+        </Button>
       </div>
     </div>
   );
