@@ -30,6 +30,7 @@
   border-radius: 25px;
 }
 .todos_reset_btn {
+  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 25px;
 }
@@ -78,6 +79,16 @@
   transition: all 0.5s ease-in-out;
   overflow: hidden;
 }
+.todo_change {
+  background-color: #65e275a1;
+  border-radius: 50%;
+  width: 40px;
+  min-width: 40px;
+  text-align: center;
+  margin-left: 5px;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
 
 .todo_add {
   border-radius: 25px;
@@ -87,6 +98,17 @@
 .todo_delete:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+.todo_change:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.todo_done {
+  background-color: #c77c7c;
+  text-decoration: line-through;
+  text-decoration-color: rgba(121, 93, 93, 0.856);
+  transition-duration: 0.5s;
 }
 
 @keyframes todo_removed {

@@ -15,6 +15,7 @@ export interface Icontact {
 export interface Itodo {
   title: string;
   id: number;
+  done: boolean;
 }
 
 export interface Istore {

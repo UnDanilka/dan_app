@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
+  useChangeTodosMutation,
   useGetTodosQuery,
   useAddTodosMutation,
   useDeleteTodosMutation,
 } from "../../Redux/TodosApi";
 import { Button, Input } from "antd";
 import "./Todos.css";
-import { CloseOutlined, SettingTwoTone } from "@ant-design/icons";
+import {
+  CloseOutlined,
+  CheckOutlined,
+  SettingTwoTone,
+} from "@ant-design/icons";
 import { Itodo } from "../../types";
 
 const Todos = () => {
@@ -15,6 +20,9 @@ const Todos = () => {
   const { data = [], isLoading } = useGetTodosQuery();
   const [addTodo] = useAddTodosMutation();
   const [deleteTodo] = useDeleteTodosMutation();
+  const [changeTodo] = useChangeTodosMutation();
+
+  useEffect(() => console.log(data), [data]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewTodo(e.target.value);
@@ -22,7 +30,7 @@ const Todos = () => {
 
   const handleAddTodo = async () => {
     if (newTodo) {
-      await addTodo({ title: newTodo }).unwrap();
+      await addTodo({ title: newTodo, done: false }).unwrap();
       setNewTodo("");
     }
   };
@@ -36,14 +44,20 @@ const Todos = () => {
     });
   };
 
+  const handleChangeProduct = (todo: Itodo) => {
+    changeTodo({ ...todo, done: true });
+  };
+
   const handleResetTodos = async () => {
     setDisabled(true);
-    const deleteArr = data.map(async (item: any) => await deleteTodo(item.id));
+    const deleteArr = data.map(
+      async (item: Itodo) => await deleteTodo(item.id)
+    );
     Promise.all(deleteArr).then(() =>
-      addTodo({ title: "first" })
+      addTodo({ title: "first", done: false })
         .unwrap()
-        .then(() => addTodo({ title: "second" }).unwrap())
-        .then(() => addTodo({ title: "third" }).unwrap())
+        .then(() => addTodo({ title: "second", done: false }).unwrap())
+        .then(() => addTodo({ title: "third", done: false }).unwrap())
         .then(() => setDisabled(false))
     );
   };
@@ -77,12 +91,20 @@ const Todos = () => {
           data.map((item: Itodo) => {
             return (
               <div className="todo" key={item.id}>
-                <div className="todo_title">{item.title}</div>
+                <div className={`todo_title ${item.done ? "todo_done" : ""}`}>
+                  {item.title}
+                </div>
                 <div
                   className="todo_delete"
                   onClick={(e) => handleDeleteProduct(item.id, e)}
                 >
                   <CloseOutlined style={{ color: "white" }} />
+                </div>
+                <div
+                  className="todo_change"
+                  onClick={(e) => handleChangeProduct(item)}
+                >
+                  <CheckOutlined style={{ color: "white" }} />
                 </div>
               </div>
             );
