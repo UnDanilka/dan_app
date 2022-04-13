@@ -4,6 +4,7 @@ import {
   useGetTodosQuery,
   useAddTodosMutation,
   useDeleteTodosMutation,
+  deleteTodoNative,
 } from "../../Redux/TodosApi";
 import { Button, Input } from "antd";
 import "./Todos.css";
@@ -51,7 +52,7 @@ const Todos = () => {
   const handleResetTodos = async () => {
     setDisabled(true);
     const deleteArr = data.map(
-      async (item: Itodo) => await deleteTodo(item.id)
+      async (item: Itodo) => await deleteTodoNative(item.id)
     );
     Promise.all(deleteArr).then(() =>
       addTodo({ title: "first", done: false })

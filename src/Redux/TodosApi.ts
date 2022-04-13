@@ -46,3 +46,9 @@ export const {
   useDeleteTodosMutation,
   useChangeTodosMutation,
 } = todosApi;
+
+export const deleteTodoNative = (id: number) => {
+  return fetch("https://heroku-json-dan-app.herokuapp.com/todos/" + id, {
+    method: "DELETE",
+  });
+};
