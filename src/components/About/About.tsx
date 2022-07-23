@@ -5,20 +5,22 @@ import "./About.css";
 import photo from "./photo.jpg";
 import photo_dark from "./photo_dark.jpg";
 
+const skills: string[] = [
+  "JS",
+  "css",
+  "html",
+  "react",
+  "redux",
+  "typescript",
+  "jest",
+  "git",
+];
+
 const About = () => {
   const theme: string = useSelector((store: Istore) => {
     return store.theme.theme;
   });
-  const skills: string[] = [
-    "JS",
-    "css",
-    "html",
-    "react",
-    "redux",
-    "typescript",
-    "jest",
-    "git",
-  ];
+
   const experience: string[] = [
     "2+ year",
     "over 10 commercial projects",
@@ -37,7 +39,7 @@ const About = () => {
   return (
     <div className="about">
       <div className="about_welcome">
-        Hi my name is Danil and I'm frontend developer
+        Hi my name is Danil and I'm a frontend developer
       </div>
       <div className="about_personal ">
         <div>
